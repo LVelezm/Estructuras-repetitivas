@@ -1,20 +1,26 @@
 #include <iostream>
+#include <locale.h>
+
 using namespace std;
 
 int main() {
+	
+	setlocale(LC_ALL, "");
     int n, multiplo, opcion;
     int i = 1;
+    
     do {
-        cout << "Menu:(1 o 2)" << endl;
-        cout << "1. Calcular los multiplos de 7" << endl;
-        cout << "2. Salir" << endl;
-        cout << "Ingrese su opcion: ";
+        cout << "Menu:(Escoja 1 o 2)" << endl;
+        cout << "1. Calcular los múltiplos de 7" << endl;
+        cout << "2. Salir del programa" << endl;
+        cout << "Ingrese su opción: ";
         cin >> opcion;
 
         switch(opcion) {
             case 1:
-			cout << "Ingrese el numero de multiplos de 7: ";
+			cout << "Ingrese el n número de múltiplos de 7: ";
     		cin >> n;
+    		
     		while (i <= n) {
        		multiplo = 7 * i;
         	cout << multiplo << endl;
@@ -22,11 +28,13 @@ int main() {
    			}
    			return 0;
             break;
+            
             case 2:
                 cout << "Saliendo del programa..." << endl;
                 break;
+            
             default:
-                cout << "Opcion invalida. Intente de nuevo." << endl;
+                cout << "Opcion inválida. Intente de nuevo." << endl;
         }
 
         cout << endl;
